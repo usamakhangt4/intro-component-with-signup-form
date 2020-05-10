@@ -8,6 +8,7 @@
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   <link rel="stylesheet" href="./styles/style.css">
+  <script src="./app.js" defer></script>
   <title>Frontend Mentor | Intro component with sign up form</title>
 
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
@@ -36,11 +37,27 @@
       <div class="card1"><b>Try it free 7 days</b>&nbsp; then $20/mo. thereafter</div>
       <div class="card2">
         <form action="#">
-          <input type="text" placeholder="First Name">
-          <input type="text" placeholder="Last Name">
-          <input type="email" placeholder="Email Address">
-          <input type="password" placeholder="Password">
-          <button type="submit">Claim your free trial</button>
+          <div class="fname">
+            <input id="fname" type="text" placeholder="First Name">
+            <img class="fErr" src="./images/icon-error.svg" alt="error icon">
+            <span class="fErr">First Name cannot be empty</span>
+          </div>
+          <div class="lname">
+            <input id="lname" type="text" placeholder="Last Name">
+            <img class="lErr" src="./images/icon-error.svg" alt="error icon">
+            <span class="lErr">Last Name cannot be empty</span>
+          </div>
+          <div class="email">
+            <input id="email" type="email" placeholder="Email Address">
+            <img class="emailErr" src="./images/icon-error.svg" alt="error icon">
+            <span class="emailErr">Looks like this is not an email</span>
+          </div>
+          <div class="pass">
+            <input id="pass" type="password" placeholder="Password">
+            <img class="passErr" src="./images/icon-error.svg" alt="error icon">
+            <span class="passErr">Password cannot be empty</span>
+          </div>
+          <button id="submitbtn" type="submit" onclick="validate()">Claim your free trial</button>
           <p class="tac">By clicking the button, you are agreeing to our <span class="red">Terms and Services</span></p>
         </form>
       </div>
